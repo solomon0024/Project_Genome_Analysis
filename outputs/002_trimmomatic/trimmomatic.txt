@@ -1,0 +1,13 @@
+#To view trimmomatic output (This was done in R)
+# Read the BLAST results file into a data frame
+blast_results <- read.table("C:/Users/solom/Desktop/GenomeAnalysis/synteny_resultss.txt", header = FALSE, sep = "\t")
+
+# Set column names
+colnames(blast_results) <- c("Contig_ID", "Subject_ID", "Percentage_Identity", "Alignment_Length", "Other_Columns")
+
+# Calculate averages by contig ID
+contig_summary <- aggregate(cbind(Percentage_Identity, Alignment_Length) ~ Contig_ID, data = blast_results, FUN = mean)
+
+# Print the summary
+print(contig_summary)
+

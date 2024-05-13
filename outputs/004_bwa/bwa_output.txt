@@ -1,0 +1,3 @@
+#To view BWA output statistics
+module load bioinfo-tools samtools
+samtools flagstat alignment_illumina.bam

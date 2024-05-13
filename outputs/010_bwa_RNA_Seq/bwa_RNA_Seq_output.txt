@@ -1,0 +1,8 @@
+# To view BWA output statistics
+module load bioinfo-tools samtools
+samtools flagstat alignment_RNA_seq_paired_69_sorted.bam
+samtools flagstat alignment_RNA_seq_paired_70_sorted.bam
+samtools flagstat alignment_RNA_seq_paired_71_sorted.bam
+samtools flagstat alignment_RNA_seq_BH_72_sorted.bam
+samtools flagstat alignment_RNA_seq_BH_73_sorted.bam
+samtools flagstat alignment_RNA_seq_BH_74_sorted.bam
